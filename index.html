@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>dotoshop</title>
+	<script src="js/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="js/jscolor.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+	<header>
+		<input type="image" src="image\dotoshop.png" />
+	</header>
+	
+	<div id="main">
+		<section>
+			<div id="size">
+				<input id="8" type="radio" name="size" value="8" onclick="greedSize(8)" />
+				<label for="8"> 8x8 </label>
+				<input id="16" type="radio" name="size" value="16" onclick="greedSize(16)" />
+				<label for="16"> 16x16 </label>
+				<input id="32" type="radio" name="size" value="32" onclick="greedSize(32)" />
+				<label for="32"> 32x32 </label>
+			</div>
+			
+			<div>
+				<ul id="dots">
+				</ul>	
+			</div>
+		</section>
+		<aside>
+			<div id="item">
+				<div id="item_dots">
+					<input id="paint" type="image" src="image\paint.png" onclick="bg()"/>
+					<input id="color-panel" type="image" class="color" src="image\color-panel.png" onchange="colorChange(this.value)">
+				</div>
+			</div>
+			<div id="Pallette">
+				<ul id="pallette_dots">
+				</ul>			
+			</div>
+			<div id="quick_color">
+				<ul id="quick_color_dots" >
+					<input id="colorSet1" type="image" src="image\1.png" onclick="palletteTab(1)" />
+					<input id="colorSet2" type="image" src="image\2.png" onclick="palletteTab(2)" />
+				</ul>
+			</div>
+		</aside>
+	</div>
+	<footer>
+		<br><br>
+		<input id="twitter" type="image" src="image\twitter.png" onclick="twitter()" />
+		<input id="facebook" type="image" src="image\facebook.png" onclick="facebook()" />
+		<input id="save" type="image" src="image\save.png" value="다운로드" onclick="save()" />
+	</footer>
+	<canvas id="image" style="border:1px solid #000;display:none"></canvas>
+	<a style="display:none;" id="downloadLink" href="#" download="#"></a>
+</body>
+</html>
